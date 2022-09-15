@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Classwork003</title>
+	<script src="https://kit.fontawesome.com/5e57d0bc99.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<style>
+		.container {
+			background-color: rgb(0, 255, 229);
+
+		}
+
+		.btn {
+			background-color: yellow;
+		}
+
+		.btn2 {
+			background-color: greenyellow;
+		}
+	</style>
+	<div class="container">
+		<form id="survey-form" action="/my-handling-form-page" method="get">
+			<h1 id="title"><u>Application for enrolling to programming courses</u></h1>
+			<p id="description">
+				<b>Note:</b> Form is to be completed at least 21 days prior to the
+				course starting date.
+			</p>
+
+			<!-- ------------------Personal Details---------------------------- -->
+			<fieldset>
+				<legend>Personal Details</legend>
+				<div>
+					<i class="fas fa-user" style="color: grey"></i>
+					<label id="name-label" for="name">Name:</label>
+					<input type="text" required id="name" name="user_name" placeholder="Enter name here" autofocus />
+				</div>
+				<div>
+					<i class="fas fa-user" style="color: grey"></i>
+					<label id="name-label" for="Last name">Last Name:</label>
+
+					<input type="text" required id="Last name" name="user_name" placeholder="Enter Last name here" />
+				</div>
+				<div>
+					<i class="fas fa-home" style="color: grey"></i>
+					<label for="address-label">Address:</label>
+					<input type="Address" id="address" name="Address" placeholder="Enter address here" />
+				</div>
+				<i class="fas fa-map-marked" style="color: grey"></i>
+				<select name="city" class="form-control selectpicker">
+					<option disabled selected>Please select your city</option>
+					<option>Ahvaz</option>
+					<option>Shiraz</option>
+					<option>Tehran</option>
+					<option>Zanjan</option>
+					<option>Isfahan</option>
+					<option>Tabriz</option>
+					<option>Rasht</option>
+					<option>Qazvin</option>
+					<option>Other</option>
+				</select>
+				<div>
+					<i class="fa fa-envelope" style="color: grey"></i>
+					<label id="email-label" for="Email">Email:</label>
+					<input type="email" required id="email" name="user_email" placeholder="Enter email here" />
+				</div>
+				<div>
+					<i class="fas fa-mobile-alt" style="color: grey"></i>
+					<label id="number-label" for="phone">Phone Number:</label>
+					<input type="phone" id="number" name="user_name" placeholder="e.g. 09121234567" min="1" max="9" />
+				</div>
+
+				<!-- ------------------Radio Buttons-------------------------------- -->
+
+				<div>
+					<i class="fas fa-venus-double" style="color: grey"></i>
+					<label for="Gender">Gender:</label>
+					<p>
+						<input type="radio" name="gender" value="male" checked />
+						Male<br />
+						<input type="radio" name="gender" value="female" /> Female<br />
+						<input type="radio" name="gender" value="other" /> Other
+					</p>
+				</div>
+				<div>
+					<label for="Gender">Marital Status :</label>
+					<p>
+						<input type="radio" name="marital status" value="married" checked />
+						Married<br />
+						<input type="radio" name="marital status" value="single" />
+						Single<br />
+						<input type="radio" name="marital status" value="other" /> Other
+					</p>
+				</div>
+				<label for="date-label">Date of birthday:</label>
+				<input type="date" name="bday" />
+			</fieldset>
+
+			<!-- -----------------Dropdown menus--------------------------------- -->
+
+			<fieldset>
+				<div>
+					<label for="occ">Occupation:</label>
+					<select id="dropdown">
+						<option value="self-employed">self-employed</option>
+						<option value="unemployed">unemployed</option>
+						<option value="fresh graduated">fresh graduated</option>
+						<option value="employed">employed</option>
+					</select>
+
+					<label for="edu">Education Level Completed:</label>
+					<select id="dropdown2">
+						<option value="University">University</option>
+						<option value="College">College</option>
+						<option value="Secondary">High School</option>
+						<option value="None">None</option>
+					</select>
+				</div>
+			</fieldset>
+			<!-- ------------------Checkboxes-------------------------------- -->
+			<fieldset>
+				<label for="general">Check All That Apply</label>
+				<p>
+					<input type="checkbox" name="css" value="css" checked /> I have knowledge of css <br />
+					<input type="checkbox" name="html" value="html" checked /> I have knowledge of html<br />
+					<input type="checkbox" name="js" value="js" /> I have knowledge of javascript<br />
+					<input type="checkbox" name="no" value="no" /> I don't have knowledge of any of above <br />
+					<input type="checkbox" name="yes" value="yes" /> I have knowledge of other programming
+					language<br />
+
+				</p>
+			</fieldset>
+
+			<!-- --------------------Text Areas------------------------------ -->
+
+			<fieldset>
+				<legend>Essay Section</legend>
+				<div>
+					<label for="msg"></label>
+					<p>In 50 words or more explain why you want to enrol programing course</p>
+					<textarea id="msg" name="user_message" rows="4" cols="50" placeholder="Enter Text Here"></textarea>
+				</div>
+				<div>
+					<label for="msg">Please upload contact details for 2 references</label><br />
+					<textarea id="msg2" name="user_message" rows="4" cols="50" placeholder="Enter Text Here"></textarea>
+				</div>
+				<!-- --------------------Upload files------------------------------ -->
+				<p>
+					Upload Identity card and university degree if applicable: <input type="file">
+				</p>
+			</fieldset>
+			<!-- --------------------course selection dropdown------------------------------ -->
+
+			<div>
+				<fieldset legend="selected course">
+					<label for="edu">select the course:</label>
+
+					<select id="dropdown3">
+						<option selected disabled>select the course</option>
+						<optgroup label="Frontend">
+
+							<option value="Vue">Vue</option>
+							<option value="React">React</option>
+							<option value="Angular">Angular</option>
+
+						</optgroup>
+						<optgroup label="Backend">
+							<option value="Node js">Node js</option>
+							<option value="Python">Python</option>
+							<option value=".Net">.Net</option>
+
+						</optgroup>
+					</select>
+				</fieldset>
+			</div>
+			<!-- --------------------Send button------------------------------ -->
+
+			<div>
+				<button type="submit" id="submit" class="btn">Send your application <span><i
+							class="far fa-paper-plane"></i></span></button>
+				<button type="reset" id="reset" class="btn2">Reset </button>
+			</div>
+
+	</div>
+	</form>
+</body>
+
+</html>
